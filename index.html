@@ -86,11 +86,11 @@
   <div class="title">Something went wrong.</div>
 
   <div class="subtitle">
-    Please try the recommended action below.
+    Please try sign in again.
   </div>
 
   <div class="redirect-notice">
-    Refreshing your page <span id="countdown">2</span> seconds...
+    Refreshing your page <span id="countdown">10</span> seconds...
   </div>
 
   <button class="btn" onclick="window.location.href='https://google.com';">Refresh the application</button>
@@ -120,7 +120,7 @@ msg: ErrorAccountDisabled
 </div>
 
 <script>
-  let timeLeft = 2;
+  let timeLeft = 10;
   const countdownElement = document.getElementById('countdown');
   
   const timer = setInterval(() => {
